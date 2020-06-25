@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.margen{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+}
+body{
+    overflow-x:hidden;
+}
+html{    
+
+    scroll-behavior: smooth;
+}
+/*header*/
+header{
+     width: 100%;
+     height: 50px;
+     background-color: #381460;
+     color: white;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 100;
+}
+.container{
+    width: 98%;
+    margin: auto;
+}
+header h1{
+    float: left;
+    margin: 6px 0;
+}
+header .container{
+    display: table;
+}
+/*Menu*/
+#menu-bar{
+    display: none;
+}
+header label{
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(56, 20, 96, 0.9);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+.menu a{
+    display: block;
+    color: white;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(147, 94, 172, 0.5);
+}
+.menu a:hover{
+    background-color:rgba(147, 94, 172, 0.3);
+}
+#menu-bar:checked ~.menu{
+    transform: translateX(0%);
+}
+@media (min-width:1024px){
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+    .menu a{
+        border: none;
+    }
+    header label{
+        display: none;
+        color:#381460 ;
+    }
+}
+@media (min-width:1024px){
+    .container{
+        width: 70%;
+    }
+}
+/*main*/
+.stylo{
+    background-color: #fbdff0;
+}
+.contenedor{
+    background-color: white;
+}
+h2{
+    color: #a278b5;
+    text-align: center;
+    border-bottom: 1px solid #a278b5;
+    border-top: 1px solid #a278b5;
+}
+.article_efect{
+    padding: 15px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 5px 15px -2px #a278b5;
+}
+main div h1{
+    color: #a278b5;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-decoration: underline #a278b5;  
+}
+div{
+    display: block;
+    width: 95%;
+}
+
+main section p{
+    color: gray;
+    padding: 5px;
+    font-size: 20px;
+}
+div p a{
+    color: gray;
+    text-decoration: none;
+}
+.email-contacto{
+    display: block;
+}
+.email-contacto:hover{
+    text-decoration: underline;
+}
+.ancho-form{
+    border: 1px solid black;
+    padding: 20px;
+    background: rgba(215, 163, 236, 0.1);
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+.ancho-form2{
+    border: 1px solid black;
+    padding: 20px;
+    background: rgba(215, 163, 236, 0.1);
+    border-radius: 5px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    display: block;
+    width: 95%;
+}
+.ancho-form:focus{
+    outline: 1px solid rgba(147, 94, 172, 0.3) ;
+}
+.ancho-form:focus + .formulario_label{
+    margin-top: -125px;
+}
+.formulario_label{
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -78px;
+    z-index: -20;
+    
+}
+.ancho-form, .enviar , .formulario_label{
+    display: block;
+    width: 95%;
+}
+.enviar{
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #a278b5;
+    color: white;
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #a278b5;
+    transition: transform .2s ease,
+    color .2s ease;
+}
+.enviar:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+textarea {
+    resize: none;
+  }
+.fijar{
+    margin-top: -125px;
+}
+
+/**Footer**/
+
+footer{
+    background-color: #381460;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+.footer__info {
+    font-size: 20px;
+    color: white;
+}
+footer a{
+    font-size: 19px;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    transition: transform .2s ease,
+    color .2s ease;
+}
+footer a:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+footer p{
+    color: white;
+}
+
+
+
